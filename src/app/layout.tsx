@@ -1,8 +1,19 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import type { Metadata } from "next";
+import clsx from "clsx";
+import { Nunito, Nunito_Sans } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const nunito = Nunito({
+  subsets: ['latin'], // especifica o conjunto de caracteres que serão carregados.
+  display: 'swap', // fallback enquanto não é carregada completamente. 
+  variable: '--font-nunito', // é o nome da variavel que será usada para referenciar essa fonte no CSS .
+})
+
+const nunitoSans = Nunito_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-nunito-sans',
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={clsx(nunito.variable, nunitoSans.variable)}>
+      <body>{children}</body>
     </html>
   );
 }
