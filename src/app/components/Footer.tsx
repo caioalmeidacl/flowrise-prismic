@@ -20,7 +20,7 @@ export default async function Footer() {
                     <li key={label}>
                         <PrismicNextLink field={link}>{label}</PrismicNextLink>
                     </li>
-                ))};
+                ))}
             </ul>
         </footer>
     )
