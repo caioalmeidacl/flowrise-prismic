@@ -10,10 +10,7 @@ export default async function Page() {
 
   const page = await client.getSingle("homepage");
 
-  return <div className="text-red-500">It worked!</div>;
-
-  // return <SliceZone slices={page.data.slices} components={components} />;
-
+  return <SliceZone slices={page.data.slices} components={components} />;
 }
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -25,6 +22,5 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: page.data.meta_title,
     description: page.data.meta_description,
-
   };
 }
