@@ -8,7 +8,7 @@ import Heading from "@/app/components/Heading";
 
 const components: JSXMapSerializer = {
   heading1: ({ children }) => (
-    <Heading as="h1" size="xl" className="md:mb-8 mb-4 mt-12 first:mt-0 last:mb-0">
+    <Heading as="h1" size="xl" className="md:mb-8 mb-4 first:mt-0 last:mb-0">
       {children}
   </Heading>
   ), 
