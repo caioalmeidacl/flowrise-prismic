@@ -17,7 +17,7 @@ const  components: JSXMapSerializer = {
     </Heading>
   ), 
   paragraph: ({ children }) => (
-    <p className="text-center text-slate-600">
+    <p className="text-center text-slate-600 mb-4">
       {children}
     </p>
     
@@ -43,7 +43,7 @@ const CallToAction = ({ slice }: CallToActionProps): JSX.Element => {
       bg-gradient-to-tr from-cyan-50 via-white to-emerald-50">
         <PrismicRichText field={slice.primary.heading} components={components}/>
         <PrismicRichText field={slice.primary.body} components={components}/>
-        <Button field={slice.primary.button_link}>
+        <Button field={slice.primary.button_link} >
           {slice.primary.button_text}
         </Button>
       </div>
